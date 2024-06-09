@@ -1,0 +1,13 @@
+project:
+  name: "cloudformation-demo-ci"
+  s3_bucket: "artifacts-us-east-1-073995604235"
+  regions:
+  - us-east-1
+  template: "templates/"
+  parameters:
+    KeyName: "TestEC2KeyName"
+tests:
+  default:
+    template: "templates/ec2-template.cfn.yaml"
+  parameters:
+    KeyName: "TestEC2KeyName"
